@@ -1,35 +1,34 @@
 :root {
-  --color-primary: #006cbb;
-
+  --color-primary: #1e9855;      
+  --color-primary-light: #4d442a;
+  --color-primary-dark: #3bc71f;  
   --color-white: #fff;
-  --color-gray: #dfdfdf;
-  --color-black: #000;
-
+  --color-gray: #f0f0f0;          
+  --color-bg-light: #fdfdfd;      
+  --color-black: #46b125;            
   --color-success: #01bd78;
   --color-error: #d40019;
 }
 
 * {
   box-sizing: border-box;
-
   &::selection {
-    color: var(--color-white);
-    background-color: var(--color-primary);
+    color: white; 
+    background-color: #cc8800;
   }
 }
 
 @font-face {
   font-family: 'base';
   font-weight: 400;
-  src: url('/fonts/400.woff2') format('woff2');
-  font-display: swap;
+ src: url('/fonts/400.woff2') format('woff2'); 
+font-display: swap;
 }
-
 @font-face {
-  font-family: 'base';
-  font-weight: 700;
-  src: url('/fonts/700.woff2') format('woff2');
-  font-display: swap;
+font-family: 'base';
+font-weight: 700;
+src: url('/fonts/700.woff2') format('woff2');
+font-display: swap;
 }
 
 body {
@@ -37,12 +36,19 @@ body {
   margin: 0;
   font-size: 1rem;
   line-height: 1.5;
+  background-color: var(--color-bg-light);
+  color: var(--color-black);
+  font-family: 'base', sans-serif; 
 }
 
 a {
   width: fit-content;
   color: var(--color-primary);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 h1,
@@ -51,6 +57,7 @@ h2 {
   margin-bottom: 24px;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-primary-dark);
 }
 
 p {
@@ -58,11 +65,11 @@ p {
 }
 
 p + p {
-  margin: 12px 0;
+  margin: 12px 0 0 0; 
 }
 
 img {
-  display: flex;
+  display: block; 
   max-width: 100%;
   height: auto;
   pointer-events: none;
